@@ -23,8 +23,11 @@ To use the MLP library, you need to include the header files MLP.h, neuron.h, an
 ### The basic steps for building an MLP model using the library are:
 
 1 - Define the network architecture by specifying the number of inputs and neurons in each layer. This is done by creating a std::vector<int> object dims, where dims[i] is the number of neurons in layer i.
+
 2 - Create an instance of the NeuralNetwork<T> class, where T is the type of the input and output data (e.g., double).
+
 3 - Parse the input data into a std::vector<std::vector<scalar<T>\*>> object using the parse_input() function.
+
 4 - Train the model by iterating over the dataset for a fixed number of epochs. In each epoch, perform a forward pass on the input data to get the predicted output, calculate the loss using a suitable loss function (e.g., mean squared error), and perform a backward pass to update the weights using gradient descent.
 The main.cpp file provides an example of how to perform these steps in code. You can modify the code to suit your needs.
 
